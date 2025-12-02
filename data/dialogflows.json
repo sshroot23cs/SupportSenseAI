@@ -1,0 +1,451 @@
+{
+  "dialogflows": {
+    "intent_welcome": {
+      "name": "Welcome Flow",
+      "description": "Initial greeting and capability introduction",
+      "entry_message": "Welcome to SquareTrade! I'm here to help you with: 1) Information about protection plans for smartphones, tablets, laptops, and appliances 2) Details about coverage, pricing, and plan features 3) Help filing claims and tracking status 4) Information on device replacement 5) Contact information for customer support. What would you like to know more about?",
+      "states": [
+        {
+          "state_id": "welcome_start",
+          "type": "greeting",
+          "message": "Welcome to SquareTrade! I'm here to help you with: 1) Information about protection plans for smartphones, tablets, laptops, and appliances 2) Details about coverage, pricing, and plan features 3) Help filing claims and tracking status 4) Information on device replacement 5) Contact information for customer support. What would you like to know more about?",
+          "next_states": ["awaiting_user_input"],
+          "actions": []
+        },
+        {
+          "state_id": "awaiting_user_input",
+          "type": "input",
+          "message": null,
+          "next_states": ["intent_plan_inquiry", "intent_file_claim", "intent_contact_support"],
+          "actions": ["detect_intent"]
+        }
+      ]
+    },
+    "intent_plan_inquiry": {
+      "name": "Plan Inquiry Flow",
+      "description": "User asking about available plans",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "plan_inquiry_start",
+          "type": "response",
+          "message": "We offer comprehensive protection plans for various devices",
+          "next_states": ["plan_inquiry_clarify"],
+          "actions": ["retrieve_documents", "generate_answer"]
+        },
+        {
+          "state_id": "plan_inquiry_clarify",
+          "type": "clarification",
+          "message": "Would you like to know more about: 1) Smartphone & Tablet plans, 2) Laptop & Computer plans, 3) Appliance plans, 4) Pricing & Payment options?",
+          "next_states": ["intent_plan_details", "intent_pricing"],
+          "actions": []
+        }
+      ]
+    },
+    "intent_plan_details": {
+      "name": "Plan Details Flow",
+      "description": "User wants specific plan details",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "plan_details_start",
+          "type": "response",
+          "message": "Let me provide details about plan coverage",
+          "next_states": ["plan_details_coverage"],
+          "actions": ["retrieve_documents", "generate_answer"]
+        },
+        {
+          "state_id": "plan_details_coverage",
+          "type": "information",
+          "message": "Coverage includes accidental damage, manufacturer defects, mechanical failures, and hardware malfunctions. Would you like to know about exclusions or specific device coverage?",
+          "next_states": ["plan_details_exclusions", "plan_details_device_specific"],
+          "actions": []
+        },
+        {
+          "state_id": "plan_details_exclusions",
+          "type": "information",
+          "message": "Exclusions include normal wear and tear, cosmetic damage only, theft, or loss. Would you like to know about anything else?",
+          "next_states": ["awaiting_user_input"],
+          "actions": []
+        },
+        {
+          "state_id": "plan_details_device_specific",
+          "type": "clarification",
+          "message": "Which device type are you interested in: 1) Smartphone/Tablet, 2) Laptop/Computer, 3) Appliances?",
+          "next_states": ["plan_details_provided"],
+          "actions": []
+        },
+        {
+          "state_id": "plan_details_provided",
+          "type": "confirmation",
+          "message": "Is there anything else you'd like to know?",
+          "next_states": ["awaiting_user_input"],
+          "actions": []
+        }
+      ]
+    },
+    "intent_pricing": {
+      "name": "Pricing Flow",
+      "description": "User asking about costs and payment",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "pricing_start",
+          "type": "response",
+          "message": "Let me share our pricing information",
+          "next_states": ["pricing_overview"],
+          "actions": ["retrieve_documents", "generate_answer"]
+        },
+        {
+          "state_id": "pricing_overview",
+          "type": "information",
+          "message": "Our pricing varies by device type and plan level. Would you like details for: 1) Smartphones ($4-$15/month), 2) Tablets ($3-$8/month), 3) Laptops ($7-$18/month), 4) Appliances ($12+/month)?",
+          "next_states": ["pricing_by_device"],
+          "actions": []
+        },
+        {
+          "state_id": "pricing_by_device",
+          "type": "information",
+          "message": "We offer monthly, annual, and multi-year options. Annual plans save 10% compared to monthly billing.",
+          "next_states": ["pricing_payment_options"],
+          "actions": []
+        },
+        {
+          "state_id": "pricing_payment_options",
+          "type": "information",
+          "message": "You can pay with credit card, debit card, or PayPal. Would you like to activate a plan?",
+          "next_states": ["intent_activation"],
+          "actions": []
+        }
+      ]
+    },
+    "intent_file_claim": {
+      "name": "File Claim Flow",
+      "description": "User wants to file a claim",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "claim_start",
+          "type": "response",
+          "message": "I can help you file a claim. Let me explain the process",
+          "next_states": ["claim_process"],
+          "actions": ["retrieve_documents"]
+        },
+        {
+          "state_id": "claim_process",
+          "type": "instruction",
+          "message": "Here's how to file a claim: 1) Log into your SquareTrade account, 2) Click 'File a Claim', 3) Select your device, 4) Describe the damage, 5) Upload photos and proof of purchase, 6) Submit your claim",
+          "next_states": ["claim_confirmation"],
+          "actions": ["generate_answer"]
+        },
+        {
+          "state_id": "claim_confirmation",
+          "type": "confirmation",
+          "message": "Most claims are reviewed within 24 hours. You'll receive an email with your claim number. Do you have any other questions?",
+          "next_states": ["awaiting_user_input"],
+          "actions": []
+        }
+      ]
+    },
+    "intent_claim_status": {
+      "name": "Claim Status Flow",
+      "description": "User checking claim status",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "status_start",
+          "type": "response",
+          "message": "I can help you track your claim status",
+          "next_states": ["status_tracking"],
+          "actions": ["retrieve_documents"]
+        },
+        {
+          "state_id": "status_tracking",
+          "type": "instruction",
+          "message": "You can track your claim by: 1) Logging into your SquareTrade account, 2) Going to 'My Claims' section, 3) Checking your claim status (Submitted, Under Review, Approved, or Completed)",
+          "next_states": ["status_notification"],
+          "actions": ["generate_answer"]
+        },
+        {
+          "state_id": "status_notification",
+          "type": "information",
+          "message": "You'll receive email notifications at each status change. Typical processing time: Reviews within 24 hours, Repairs 5-10 business days, Replacements 2-3 business days",
+          "next_states": ["status_help"],
+          "actions": []
+        },
+        {
+          "state_id": "status_help",
+          "type": "question",
+          "message": "Do you need help with anything else regarding your claim?",
+          "next_states": ["awaiting_user_input"],
+          "actions": []
+        }
+      ]
+    },
+    "intent_device_replacement": {
+      "name": "Device Replacement Flow",
+      "description": "User asking about replacement",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "replacement_start",
+          "type": "response",
+          "message": "Let me explain our device replacement process",
+          "next_states": ["replacement_eligibility"],
+          "actions": ["retrieve_documents"]
+        },
+        {
+          "state_id": "replacement_eligibility",
+          "type": "information",
+          "message": "If your device is beyond repair, we can replace it with a refurbished device of the same model or equivalent.",
+          "next_states": ["replacement_process"],
+          "actions": []
+        },
+        {
+          "state_id": "replacement_process",
+          "type": "instruction",
+          "message": "Once your replacement claim is approved: 1) We ship a refurbished device within 2-3 business days, 2) You receive all necessary cables and accessories, 3) Device comes with 30-day warranty, 4) You have 7 days to return if unsatisfied",
+          "next_states": ["replacement_shipping"],
+          "actions": ["generate_answer"]
+        },
+        {
+          "state_id": "replacement_shipping",
+          "type": "information",
+          "message": "Shipping is via expedited carrier with tracking information provided. Is there anything else you'd like to know?",
+          "next_states": ["awaiting_user_input"],
+          "actions": []
+        }
+      ]
+    },
+    "intent_activation": {
+      "name": "Plan Activation Flow",
+      "description": "User wants to activate a plan",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "activation_start",
+          "type": "response",
+          "message": "Great! Let me guide you through activating a plan",
+          "next_states": ["activation_steps"],
+          "actions": ["retrieve_documents"]
+        },
+        {
+          "state_id": "activation_steps",
+          "type": "instruction",
+          "message": "Here's how to activate coverage: 1) Visit our website or authorized retailers, 2) Enter your device serial number or IMEI, 3) Review plan details and pricing, 4) Complete payment (credit card, debit card, or PayPal), 5) You'll receive confirmation email with policy number",
+          "next_states": ["activation_timing"],
+          "actions": ["generate_answer"]
+        },
+        {
+          "state_id": "activation_timing",
+          "type": "information",
+          "message": "Coverage typically begins within 24 hours of purchase. Download our mobile app to manage your plan and file claims on the go.",
+          "next_states": ["activation_next"],
+          "actions": []
+        },
+        {
+          "state_id": "activation_next",
+          "type": "confirmation",
+          "message": "Do you have any questions about activation or would you like to select a specific plan?",
+          "next_states": ["intent_pricing", "awaiting_user_input"],
+          "actions": []
+        }
+      ]
+    },
+    "intent_contact_support": {
+      "name": "Contact Support Flow",
+      "description": "User wants to contact support",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "support_start",
+          "type": "response",
+          "message": "I'm happy to help! Here's how to reach our support team",
+          "next_states": ["support_channels"],
+          "actions": ["retrieve_documents"]
+        },
+        {
+          "state_id": "support_channels",
+          "type": "information",
+          "message": "SquareTrade support is available 24/7 via: 1) Phone: 1-888-SQUARE-TRADE, 2) Online chat on our website, 3) Email for non-urgent inquiries",
+          "next_states": ["support_options"],
+          "actions": []
+        },
+        {
+          "state_id": "support_options",
+          "type": "information",
+          "message": "Average phone wait time is under 5 minutes. We can help with plan activation, coverage questions, claim filing, and device replacement coordination.",
+          "next_states": ["support_escalation_check"],
+          "actions": []
+        },
+        {
+          "state_id": "support_escalation_check",
+          "type": "question",
+          "message": "Is your issue urgent? Would you like me to connect you with a human agent?",
+          "next_states": ["support_end", "escalation_initiated"],
+          "actions": []
+        },
+        {
+          "state_id": "support_end",
+          "type": "confirmation",
+          "message": "Is there anything else I can help you with?",
+          "next_states": ["awaiting_user_input"],
+          "actions": []
+        }
+      ]
+    },
+    "intent_faq": {
+      "name": "FAQ Flow",
+      "description": "General questions about service",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "faq_start",
+          "type": "response",
+          "message": "I'd be happy to answer your questions about SquareTrade",
+          "next_states": ["faq_topics"],
+          "actions": ["retrieve_documents"]
+        },
+        {
+          "state_id": "faq_topics",
+          "type": "information",
+          "message": "Common topics: 1) What's covered in plans?, 2) How do I file a claim?, 3) What's the cost?, 4) How do I activate?, 5) What devices can I protect?",
+          "next_states": ["faq_answer"],
+          "actions": ["generate_answer"]
+        },
+        {
+          "state_id": "faq_answer",
+          "type": "response",
+          "message": "Here's the information you requested",
+          "next_states": ["faq_followup"],
+          "actions": []
+        },
+        {
+          "state_id": "faq_followup",
+          "type": "question",
+          "message": "Do you have any other questions?",
+          "next_states": ["awaiting_user_input"],
+          "actions": []
+        }
+      ]
+    },
+    "intent_escalation_urgent": {
+      "name": "Urgent Escalation Flow",
+      "description": "User needs immediate assistance",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "escalation_urgent_start",
+          "type": "escalation",
+          "message": "I understand this is urgent. Let me connect you with a human agent right away.",
+          "next_states": ["escalation_initiated"],
+          "actions": ["create_escalation_ticket", "set_priority_high"]
+        },
+        {
+          "state_id": "escalation_initiated",
+          "type": "confirmation",
+          "message": "Your case has been escalated to our support team. An agent will contact you shortly.",
+          "next_states": ["escalation_end"],
+          "actions": ["send_escalation_notification"]
+        },
+        {
+          "state_id": "escalation_end",
+          "type": "end",
+          "message": "Thank you for your patience. We appreciate your business.",
+          "next_states": [],
+          "actions": []
+        }
+      ]
+    },
+    "intent_escalation_issue": {
+      "name": "Issue Escalation Flow",
+      "description": "User reports a problem",
+      "entry_message": null,
+      "states": [
+        {
+          "state_id": "issue_start",
+          "type": "escalation",
+          "message": "I'm sorry you're experiencing an issue. Let me document this and escalate it to our team.",
+          "next_states": ["issue_details"],
+          "actions": ["create_escalation_ticket"]
+        },
+        {
+          "state_id": "issue_details",
+          "type": "clarification",
+          "message": "Can you briefly describe the issue you're facing?",
+          "next_states": ["issue_documented"],
+          "actions": []
+        },
+        {
+          "state_id": "issue_documented",
+          "type": "confirmation",
+          "message": "Thank you. I've created a support ticket and our team will investigate. You'll receive updates via email.",
+          "next_states": ["issue_end"],
+          "actions": ["send_escalation_notification"]
+        },
+        {
+          "state_id": "issue_end",
+          "type": "end",
+          "message": "We apologize for the inconvenience and appreciate your patience.",
+          "next_states": [],
+          "actions": []
+        }
+      ]
+    }
+  },
+  "transitions": {
+    "common_paths": [
+      {
+        "from": "awaiting_user_input",
+        "to": "intent_plan_inquiry",
+        "trigger": "detect_plan_inquiry"
+      },
+      {
+        "from": "awaiting_user_input",
+        "to": "intent_file_claim",
+        "trigger": "detect_claim_intent"
+      },
+      {
+        "from": "awaiting_user_input",
+        "to": "intent_contact_support",
+        "trigger": "detect_support_intent"
+      },
+      {
+        "from": "any",
+        "to": "intent_escalation_urgent",
+        "trigger": "detect_urgent_keywords"
+      },
+      {
+        "from": "any",
+        "to": "intent_escalation_issue",
+        "trigger": "detect_issue_keywords"
+      }
+    ]
+  },
+  "actions": {
+    "retrieve_documents": {
+      "description": "Search knowledge base for relevant documents",
+      "parameters": ["query", "top_k"]
+    },
+    "generate_answer": {
+      "description": "Use LLM to generate contextual response",
+      "parameters": ["prompt", "context"]
+    },
+    "detect_intent": {
+      "description": "Analyze user input to determine intent",
+      "parameters": ["user_input"]
+    },
+    "create_escalation_ticket": {
+      "description": "Create support ticket for escalation",
+      "parameters": ["user_input", "priority"]
+    },
+    "set_priority_high": {
+      "description": "Mark escalation as high priority",
+      "parameters": ["ticket_id"]
+    },
+    "send_escalation_notification": {
+      "description": "Send notification email to support team",
+      "parameters": ["ticket_id", "user_info"]
+    }
+  }
+}

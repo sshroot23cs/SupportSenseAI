@@ -1,0 +1,23 @@
+# SquareTrade Chat Agent Requirements
+
+# Core dependencies
+Flask==2.3.3
+Flask-CORS==4.0.0
+requests==2.31.0
+
+# Logging and utilities
+python-dotenv==1.0.0
+
+# Optional: For enhanced semantic search (uncomment when ready)
+# sentence-transformers==2.2.2
+# numpy==1.24.3
+
+# Optional: For database support (uncomment when adding persistent storage)
+# sqlalchemy==2.0.20
+# psycopg2-binary==2.9.7
+
+# Development dependencies
+# pytest==7.4.0
+# pytest-cov==4.1.0
+# black==23.7.0
+# pylint==2.17.4

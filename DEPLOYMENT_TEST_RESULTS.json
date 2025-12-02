@@ -1,0 +1,106 @@
+{
+  "timestamp": "2025-12-02T09:08:14.580607",
+  "tests_run": 14,
+  "tests_passed": 11,
+  "tests_failed": 3,
+  "details": [
+    {
+      "name": "Agent Initialization",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "SquareTradeAgent created successfully",
+      "timestamp": "2025-12-02T09:08:18.700470"
+    },
+    {
+      "name": "Agent Status Check",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "KB: 10 docs, Escalations: 13, LLM: \u2713",
+      "timestamp": "2025-12-02T09:08:20.748972"
+    },
+    {
+      "name": "Component Connectivity",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "Components: {'timestamp': '2025-12-02T09:08:20.749590', 'components': {'llm': {'status': 'available', 'model': 'auto'}, 'knowledge_base': {'status': 'loaded', 'document_count': 10}, 'escalation': {'status': 'operational', 'pending_tickets': 13}}}",
+      "timestamp": "2025-12-02T09:08:22.787672"
+    },
+    {
+      "name": "Chat: Welcome Intent",
+      "status": "\u274c FAIL",
+      "passed": false,
+      "details": "Intent: None, Confidence: 100.00%",
+      "timestamp": "2025-12-02T09:08:22.788183"
+    },
+    {
+      "name": "Chat: Plan Inquiry",
+      "status": "\u274c FAIL",
+      "passed": false,
+      "details": "Intent: None, Sources: 3",
+      "timestamp": "2025-12-02T09:08:35.144670"
+    },
+    {
+      "name": "Chat: Claims Question",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "Retrieved 3 documents",
+      "timestamp": "2025-12-02T09:08:54.515417"
+    },
+    {
+      "name": "Multi-Turn Conversation",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "3 sequential messages processed",
+      "timestamp": "2025-12-02T09:08:54.519509"
+    },
+    {
+      "name": "Escalation Detection",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "Escalation ID: ESC_00018",
+      "timestamp": "2025-12-02T09:08:54.524125"
+    },
+    {
+      "name": "Pending Escalations List",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "Found 17 pending escalations",
+      "timestamp": "2025-12-02T09:08:54.524125"
+    },
+    {
+      "name": "FAQ Retrieval (All)",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "Retrieved 3 FAQs",
+      "timestamp": "2025-12-02T09:08:54.525125"
+    },
+    {
+      "name": "FAQ Retrieval (Category)",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "Retrieved 3 plan FAQs",
+      "timestamp": "2025-12-02T09:08:54.525125"
+    },
+    {
+      "name": "Knowledge Base Search",
+      "status": "\u274c FAIL",
+      "passed": false,
+      "details": "'SquareTradeAgent' object has no attribute 'rag_engine'",
+      "timestamp": "2025-12-02T09:08:54.525125"
+    },
+    {
+      "name": "Empty Message Handling",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "Empty messages handled gracefully",
+      "timestamp": "2025-12-02T09:08:54.526126"
+    },
+    {
+      "name": "Whitespace Message Handling",
+      "status": "\u2705 PASS",
+      "passed": true,
+      "details": "Whitespace handled gracefully",
+      "timestamp": "2025-12-02T09:08:54.526126"
+    }
+  ]
+}

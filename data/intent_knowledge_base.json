@@ -1,0 +1,161 @@
+{
+  "intents": {
+    "intent_plan_inquiry": {
+      "description": "User asks about available plans",
+      "priority": 1,
+      "documents": ["doc_001", "doc_002", "doc_007", "doc_010"],
+      "category": "protection_plans",
+      "keywords": ["plan", "offer", "coverage", "protection", "device", "what"]
+    },
+    "intent_plan_details": {
+      "description": "User wants specific details about plans",
+      "priority": 1,
+      "documents": ["doc_004", "doc_002", "doc_007"],
+      "category": "protection_plans",
+      "keywords": ["included", "coverage", "exclusion", "deductible", "limit", "what"]
+    },
+    "intent_pricing": {
+      "description": "User asks about costs",
+      "priority": 1,
+      "documents": ["doc_006"],
+      "category": "protection_plans",
+      "keywords": ["cost", "price", "monthly", "payment", "discount", "how much"]
+    },
+    "intent_file_claim": {
+      "description": "User wants to file a claim",
+      "priority": 2,
+      "documents": ["doc_003", "doc_008", "doc_001"],
+      "category": "claims",
+      "keywords": ["file", "claim", "damage", "broken", "damaged", "how"]
+    },
+    "intent_claim_status": {
+      "description": "User checks claim status",
+      "priority": 2,
+      "documents": ["doc_008", "doc_003"],
+      "category": "claims",
+      "keywords": ["status", "claim", "tracking", "where", "approved", "long"]
+    },
+    "intent_device_replacement": {
+      "description": "User asks about replacement",
+      "priority": 2,
+      "documents": ["doc_009", "doc_008"],
+      "category": "claims",
+      "keywords": ["replacement", "replace", "device", "new", "refurbished", "when"]
+    },
+    "intent_contact_support": {
+      "description": "User wants to contact support",
+      "priority": 2,
+      "documents": ["doc_005"],
+      "category": "support",
+      "keywords": ["contact", "support", "help", "phone", "agent", "speak", "how"]
+    },
+    "intent_activation": {
+      "description": "User wants to activate a plan",
+      "priority": 1,
+      "documents": ["doc_010", "doc_006"],
+      "category": "protection_plans",
+      "keywords": ["sign up", "activate", "purchase", "enroll", "started", "how"]
+    },
+    "intent_faq": {
+      "description": "General questions",
+      "priority": 1,
+      "documents": ["doc_001", "doc_005"],
+      "category": "support",
+      "keywords": ["faq", "question", "know", "common", "more"]
+    },
+    "intent_welcome": {
+      "description": "User greets or asks for capabilities",
+      "priority": 0,
+      "documents": ["doc_001", "doc_005"],
+      "category": "support",
+      "keywords": ["hi", "hello", "help", "can you", "what", "do", "capabilities", "services"],
+      "response_template": "Welcome to SquareTrade! I'm here to help you with: 1) Information about protection plans for smartphones, tablets, laptops, and appliances 2) Details about coverage, pricing, and plan features 3) Help filing claims and tracking status 4) Information on device replacement 5) Contact information for customer support. What would you like to know more about?"
+    },
+    "intent_escalation_urgent": {
+      "description": "User needs urgent assistance",
+      "priority": 3,
+      "documents": [],
+      "category": "escalation",
+      "keywords": ["urgent", "immediate", "frustrated", "manager", "now"]
+    },
+    "intent_escalation_issue": {
+      "description": "User reports a problem",
+      "priority": 3,
+      "documents": [],
+      "category": "escalation",
+      "keywords": ["problem", "wrong", "issue", "escalate", "not satisfied"]
+    }
+  },
+  "documents": [
+    {
+      "id": "doc_001",
+      "title": "SquareTrade Protection Plans Overview",
+      "category": "protection_plans",
+      "content": "SquareTrade offers comprehensive protection plans for electronics and appliances. Our plans cover accidental damage, mechanical breakdowns, and hardware failures. We provide coverage for smartphones, laptops, tablets, TVs, and major appliances. Plans start at affordable prices with no deductibles on most coverage. Coverage includes manufacturer defects and accidental damage from drops, spills, and power surges. SquareTrade plans are transferable to new owners if you sell your device.",
+      "keywords": ["protection", "plans", "coverage", "devices", "electronics", "accidental damage"]
+    },
+    {
+      "id": "doc_002",
+      "title": "Smartphone and Tablet Protection Plans",
+      "category": "protection_plans",
+      "content": "SquareTrade smartphone protection plans cover physical damage, liquid damage, and mechanical failures. Our tablet plans protect against accidental drops and screen cracks. Plans include device replacement if repair costs exceed the device value. Coverage is available for iPhones, Samsung, Google Pixel, and other major brands. We offer 24/7 customer support for claims processing. Replacement devices are typically shipped within 2-3 business days.",
+      "keywords": ["smartphone", "tablet", "protection", "damage", "replacement", "screen", "liquid"]
+    },
+    {
+      "id": "doc_003",
+      "title": "How to File a Claim",
+      "category": "claims",
+      "content": "To file a SquareTrade claim, log into your account on our website or mobile app. Click on 'File a Claim' and select the affected device. Describe what happened to your device in detail. You may need to provide proof of purchase and photos of the damage. Submit your claim through the online portal. Most claims are reviewed within 24 hours. You will receive an email confirmation with your claim number and next steps. If approved, you can choose repair or replacement options.",
+      "keywords": ["claim", "file", "damage", "repair", "replacement", "process", "approval"]
+    },
+    {
+      "id": "doc_004",
+      "title": "Coverage Details and Exclusions",
+      "category": "protection_plans",
+      "content": "SquareTrade coverage includes accidental damage, manufacturer defects, mechanical failures, and hardware malfunctions. Coverage does NOT include normal wear and tear, cosmetic damage only, water damage beyond our liquid coverage limits, theft, or loss. Exclusions also apply to damage from unauthorized repairs or modifications. Coverage begins immediately after purchase. Deductibles vary by plan and device value. Some plans offer $0 deductibles. Maximum claim limits apply based on device value.",
+      "keywords": ["coverage", "exclusions", "deductible", "limits", "warranty", "damage"]
+    },
+    {
+      "id": "doc_005",
+      "title": "Customer Support and Contact Information",
+      "category": "support",
+      "content": "SquareTrade customer support is available 24/7 to answer questions about your plan or help with claims. You can contact us via phone at 1-888-SQUARE-TRADE or through the online chat on our website. Email support is also available for non-urgent inquiries. Our support team can help with plan activation, coverage questions, claim filing, and device replacement coordination. Average wait time for phone support is under 5 minutes. We also provide self-service tools in the mobile app for claim tracking.",
+      "keywords": ["support", "contact", "help", "phone", "chat", "customer service", "assistance"]
+    },
+    {
+      "id": "doc_006",
+      "title": "Plan Pricing and Subscription Options",
+      "category": "protection_plans",
+      "content": "SquareTrade offers flexible pricing based on device type and value. Smartphone plans range from $4-$15 per month depending on device. Tablet plans start at $3 per month for basic coverage and $8 for premium. Laptop protection plans range from $7-$18 per month. Major appliance plans start at $12 per month. We offer monthly, annual, and multi-year payment options. Annual plans provide 10% savings compared to monthly billing. All plans include 24/7 support and fast claim processing.",
+      "keywords": ["pricing", "cost", "monthly", "annual", "payment", "affordable", "value"]
+    },
+    {
+      "id": "doc_007",
+      "title": "Laptop and Computer Protection Plans",
+      "category": "protection_plans",
+      "content": "SquareTrade laptop protection covers accidental damage, mechanical failures, power surges, and component breakdowns. Plans include coverage for screens, keyboards, hard drives, and batteries. We repair or replace damaged laptops at service centers nationwide. Coverage applies to Windows PCs and MacBooks. Protection against theft is available as an optional add-on. Backup data recovery assistance is included for data loss scenarios. Technical support is available for hardware troubleshooting.",
+      "keywords": ["laptop", "computer", "protection", "repair", "damage", "breakdown", "hardware"]
+    },
+    {
+      "id": "doc_008",
+      "title": "Claim Status and Tracking",
+      "category": "claims",
+      "content": "After filing a claim, you can track its status in real-time through your SquareTrade account. Log into the website or mobile app and go to 'My Claims' section. You will see the current status such as Submitted, Under Review, Approved, or Completed. Email notifications are sent at each status change. If your claim is approved, you can choose to repair the device or receive a replacement. For repairs, estimated turnaround time is 5-10 business days. Replacement devices are shipped with tracking information.",
+      "keywords": ["claim", "status", "tracking", "notification", "approved", "repair", "replacement"]
+    },
+    {
+      "id": "doc_009",
+      "title": "Device Replacement Process",
+      "category": "claims",
+      "content": "If your device is beyond repair, SquareTrade offers device replacement. Once your replacement claim is approved, we ship a refurbished device of the same model or equivalent. Shipping is typically completed within 2-3 business days via expedited carrier. You will receive the replacement with all necessary cables and accessories. The device comes with a 30-day warranty from SquareTrade. You have 7 days to inspect the replacement and return it if unsatisfied.",
+      "keywords": ["replacement", "device", "refurbished", "shipping", "warranty", "exchange"]
+    },
+    {
+      "id": "doc_010",
+      "title": "Plan Activation and Getting Started",
+      "category": "protection_plans",
+      "content": "To activate a SquareTrade plan, purchase coverage on our website or through authorized retailers. Enter your device serial number or IMEI to verify eligibility. Review plan details and pricing options. Complete payment through credit card, debit card, or PayPal. You will receive a confirmation email with your policy number and plan details. Coverage typically begins within 24 hours of purchase. Download the SquareTrade mobile app to manage your plan and file claims on the go.",
+      "keywords": ["activation", "purchase", "enrollment", "setup", "getting started", "registration"]
+    }
+  ]
+}
