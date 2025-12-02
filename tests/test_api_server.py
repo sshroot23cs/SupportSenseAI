@@ -10,6 +10,9 @@ import time
 import sys
 from pathlib import Path
 
+PROJECT_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
 BASE_URL = "http://localhost:5000"
 MAX_RETRIES = 10
 RETRY_DELAY = 1
