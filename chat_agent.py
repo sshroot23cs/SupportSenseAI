@@ -6,7 +6,7 @@ import logging
 from typing import Dict, Any, Tuple
 from datetime import datetime
 from data_loader import KnowledgeBase
-from llm_client import OllamaClient
+from llm_client import LLMClientFactory
 from rag_engine import RAGEngine
 from escalation_handler import EscalationHandler
 from config import LOG_LEVEL, LOG_FILE
@@ -34,16 +34,16 @@ class SquareTradeAgent:
         
         # Initialize components
         self.kb = KnowledgeBase()
-        self.llm = OllamaClient()
+        self.llm = LLMClientFactory.create_client()
         self.rag = RAGEngine(kb=self.kb, llm_client=self.llm)
         self.escalation = EscalationHandler()
         
         # Verify LLM is available (non-blocking, with warnings only)
         try:
             if not self.llm.is_available():
-                logger.warning("Ollama server may not be available (non-blocking)")
+                logger.warning("LLM service may not be available (non-blocking)")
         except Exception as e:
-            logger.warning(f"Could not verify Ollama availability: {e}")
+            logger.warning(f"Could not verify LLM availability: {e}")
         
         # Check if model is available (non-blocking, with warnings only)
         try:

@@ -8,10 +8,20 @@ from pathlib import Path
 # Project root
 PROJECT_ROOT = Path(__file__).parent
 
+# LLM Provider Selection (ollama, openai, or azure)
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "ollama")
+
 # Ollama Configuration
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "auto")  # Will auto-detect available model
 OLLAMA_TIMEOUT = 300  # seconds
+
+# OpenAI Configuration
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
+
+# Azure OpenAI Configuration
+AZURE_OPENAI_MODEL = os.getenv("AZURE_OPENAI_MODEL", "gpt-35-turbo")
+AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-15-preview")
 
 # RAG Configuration
 CHUNK_SIZE = 500  # Character size for knowledge base chunks
