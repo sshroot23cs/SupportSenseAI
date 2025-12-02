@@ -20,7 +20,7 @@ VENV_PATH = PROJECT_ROOT / "venv"
 LOG_DIR = PROJECT_ROOT / "logs"
 LOG_FILE = LOG_DIR / f"server_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
 PID_FILE = PROJECT_ROOT / "server.pid"
-PORT = 5000
+PORT = 5001
 HOST = "0.0.0.0"
 
 # Setup logging
