@@ -49,12 +49,23 @@ try:
     # Test generation if available
     if is_available:
         print("\nGenerating test response...")
-        response = client.generate(
-            "What is SquareTrade?",
-            temperature=0.5,
-            max_tokens=100
-        )
-        print(f"✓ Response: {response[:150]}...")
+        try:
+            # Use appropriate parameters based on client type
+            if client.__class__.__name__ == "OllamaClient":
+                response = client.generate(
+                    "What is SquareTrade?",
+                    temperature=0.5,
+                    num_ctx=500
+                )
+            else:
+                response = client.generate(
+                    "What is SquareTrade?",
+                    temperature=0.5,
+                    max_tokens=100
+                )
+            print(f"✓ Response: {response[:150]}...")
+        except Exception as e:
+            print(f"⚠ Generation failed: {e}")
     else:
         print("\n⚠ Service not available, skipping generation test")
     
