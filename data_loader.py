@@ -90,6 +90,7 @@ class KnowledgeBase:
     def search(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
         """
         Search knowledge base for relevant documents
+        Uses keyword matching and relevance scoring
         
         Args:
             query: Search query from user
@@ -100,6 +101,7 @@ class KnowledgeBase:
         """
         results = []
         query_terms = query.lower().split()
+        query_terms = [t for t in query_terms if len(t) > 2]  # Filter out short words
         
         for doc in self.documents:
             # Simple keyword matching (in production, use semantic search)
@@ -108,11 +110,25 @@ class KnowledgeBase:
             
             # Calculate relevance score
             score = 0
+            matched_keywords = []
+            
             for term in query_terms:
+                # Check content match (lower weight)
                 if term in content_lower:
-                    score += 2
-                if term in [k.lower() for k in keywords]:
-                    score += 3
+                    score += 1
+                
+                # Check keyword match (higher weight)
+                for keyword in keywords:
+                    keyword_lower = keyword.lower()
+                    if term in keyword_lower or keyword_lower in term:
+                        score += 5
+                        matched_keywords.append(keyword)
+                        break
+            
+            # Bonus: Document has multiple matching keywords
+            unique_matched = set(matched_keywords)
+            if len(unique_matched) >= 2:
+                score += 3
             
             if score > 0:
                 results.append({
