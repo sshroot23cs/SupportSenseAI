@@ -71,6 +71,7 @@ class RAGEngine:
     def _detect_intent(self, user_query: str) -> Tuple[str, float]:
         """
         Detect user intent from query
+        Uses keyword matching with both exact and partial matching
         
         Args:
             user_query: User's question
@@ -79,15 +80,28 @@ class RAGEngine:
             Tuple of (intent_name, confidence)
         """
         query_lower = user_query.lower()
+        query_words = set(query_lower.split())
+        
         best_intent = None
         best_score = 0.0
         
         for intent_name, intent_info in self.intents.items():
             keywords = intent_info.get('keywords', [])
-            matched = sum(1 for kw in keywords if kw in query_lower)
+            matched = 0
+            
+            for kw in keywords:
+                kw_lower = kw.lower()
+                # Exact phrase match
+                if kw_lower in query_lower:
+                    matched += 2
+                # Partial word match (any word in keyword matches query)
+                elif any(word in query_lower for word in kw_lower.split()):
+                    matched += 1
             
             if matched > 0:
-                score = matched / len(keywords) if keywords else 0
+                score = matched / (len(keywords) * 2) if keywords else 0
+                # Cap score at 1.0
+                score = min(score, 1.0)
                 if score > best_score:
                     best_score = score
                     best_intent = intent_name

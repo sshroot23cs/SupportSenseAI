@@ -3,73 +3,101 @@
     "intent_plan_inquiry": {
       "description": "User asks about available plans",
       "priority": 1,
-      "documents": ["doc_001", "doc_002", "doc_007", "doc_010"],
+      "documents": ["doc_001", "doc_002", "doc_007", "doc_010", "doc_012", "doc_013", "doc_016", "doc_017", "doc_018"],
       "category": "protection_plans",
-      "keywords": ["plan", "offer", "coverage", "protection", "device", "what"]
+      "keywords": ["plan", "offer", "coverage", "protection", "device", "what", "family", "phone", "appliance", "furniture", "plans"]
     },
     "intent_plan_details": {
       "description": "User wants specific details about plans",
       "priority": 1,
-      "documents": ["doc_004", "doc_002", "doc_007"],
+      "documents": ["doc_004", "doc_002", "doc_007", "doc_012", "doc_013", "doc_018"],
       "category": "protection_plans",
-      "keywords": ["included", "coverage", "exclusion", "deductible", "limit", "what"]
+      "keywords": ["included", "coverage", "exclusion", "deductible", "limit", "what", "feature", "benefit", "details"]
+    },
+    "intent_help_resources": {
+      "description": "User asks about help center and support resources",
+      "priority": 1,
+      "documents": ["doc_011", "doc_014", "doc_005"],
+      "category": "support",
+      "keywords": ["help", "center", "resource", "faq", "support", "portal", "guide", "tutorial", "how"]
+    },
+    "intent_blog_content": {
+      "description": "User asks about blog content, tips, or guides",
+      "priority": 1,
+      "documents": ["doc_015"],
+      "category": "company_info",
+      "keywords": ["blog", "tips", "guide", "how-to", "maintenance", "article", "read", "learn"]
     },
     "intent_pricing": {
       "description": "User asks about costs",
       "priority": 1,
-      "documents": ["doc_006"],
+      "documents": ["doc_006", "doc_012", "doc_013"],
       "category": "protection_plans",
-      "keywords": ["cost", "price", "monthly", "payment", "discount", "how much"]
+      "keywords": ["cost", "price", "monthly", "payment", "discount", "how much", "pricing", "afford", "expensive"]
     },
     "intent_file_claim": {
       "description": "User wants to file a claim",
       "priority": 2,
-      "documents": ["doc_003", "doc_008", "doc_001"],
+      "documents": ["doc_003", "doc_008", "doc_001", "doc_011"],
       "category": "claims",
-      "keywords": ["file", "claim", "damage", "broken", "damaged", "how"]
+      "keywords": ["file", "claim", "damage", "broken", "damaged", "how", "submit", "file a claim"]
     },
     "intent_claim_status": {
       "description": "User checks claim status",
       "priority": 2,
-      "documents": ["doc_008", "doc_003"],
+      "documents": ["doc_008", "doc_003", "doc_011"],
       "category": "claims",
-      "keywords": ["status", "claim", "tracking", "where", "approved", "long"]
+      "keywords": ["status", "claim", "tracking", "where", "approved", "long", "how many", "my claim"]
     },
     "intent_device_replacement": {
       "description": "User asks about replacement",
       "priority": 2,
-      "documents": ["doc_009", "doc_008"],
+      "documents": ["doc_009", "doc_008", "doc_003"],
       "category": "claims",
-      "keywords": ["replacement", "replace", "device", "new", "refurbished", "when"]
+      "keywords": ["replacement", "replace", "device", "new", "refurbished", "when", "exchange", "swap"]
     },
     "intent_contact_support": {
       "description": "User wants to contact support",
       "priority": 2,
-      "documents": ["doc_005"],
+      "documents": ["doc_005", "doc_011", "doc_014"],
       "category": "support",
-      "keywords": ["contact", "support", "help", "phone", "agent", "speak", "how"]
+      "keywords": ["contact", "support", "help", "phone", "agent", "speak", "how", "call", "chat", "email"]
     },
     "intent_activation": {
       "description": "User wants to activate a plan",
       "priority": 1,
-      "documents": ["doc_010", "doc_006"],
+      "documents": ["doc_010", "doc_006", "doc_016"],
       "category": "protection_plans",
-      "keywords": ["sign up", "activate", "purchase", "enroll", "started", "how"]
+      "keywords": ["sign up", "activate", "purchase", "enroll", "started", "how", "register", "buy", "subscribe"]
+    },
+    "intent_registration": {
+      "description": "User asks about plan registration",
+      "priority": 1,
+      "documents": ["doc_016", "doc_010"],
+      "category": "protection_plans",
+      "keywords": ["register", "registration", "enroll", "setup", "account", "profile"]
+    },
+    "intent_plan_cancellation": {
+      "description": "User wants to cancel a plan",
+      "priority": 2,
+      "documents": ["doc_017"],
+      "category": "protection_plans",
+      "keywords": ["cancel", "cancellation", "terminate", "end", "stop", "refund"]
     },
     "intent_faq": {
       "description": "General questions",
       "priority": 1,
-      "documents": ["doc_001", "doc_005"],
+      "documents": ["doc_001", "doc_005", "doc_011", "doc_014"],
       "category": "support",
-      "keywords": ["faq", "question", "know", "common", "more"]
+      "keywords": ["faq", "question", "know", "common", "more", "answer"]
     },
     "intent_welcome": {
       "description": "User greets or asks for capabilities",
       "priority": 0,
-      "documents": ["doc_001", "doc_005"],
+      "documents": ["doc_001", "doc_005", "doc_011", "doc_014"],
       "category": "support",
       "keywords": ["hi", "hello", "help", "can you", "what", "do", "capabilities", "services"],
-      "response_template": "Welcome to SquareTrade! I'm here to help you with: 1) Information about protection plans for smartphones, tablets, laptops, and appliances 2) Details about coverage, pricing, and plan features 3) Help filing claims and tracking status 4) Information on device replacement 5) Contact information for customer support. What would you like to know more about?"
+      "response_template": "Welcome to SquareTrade! I'm here to help you with: 1) Information about protection plans for phones, appliances, furniture, and electronics 2) Details about coverage, pricing, plan features, and benefits 3) Help filing claims and tracking status 4) Information on device replacement 5) Plan registration, management, and cancellation 6) Access to our help center, support portal, and blog resources 7) Contact information for customer support. What would you like to know more about?"
     },
     "intent_escalation_urgent": {
       "description": "User needs urgent assistance",
