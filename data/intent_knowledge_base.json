@@ -184,6 +184,62 @@
       "category": "protection_plans",
       "content": "To activate a SquareTrade plan, purchase coverage on our website or through authorized retailers. Enter your device serial number or IMEI to verify eligibility. Review plan details and pricing options. Complete payment through credit card, debit card, or PayPal. You will receive a confirmation email with your policy number and plan details. Coverage typically begins within 24 hours of purchase. Download the SquareTrade mobile app to manage your plan and file claims on the go.",
       "keywords": ["activation", "purchase", "enrollment", "setup", "getting started", "registration"]
+    },
+    {
+      "id": "doc_011",
+      "title": "Help Center and Getting Support",
+      "category": "support",
+      "content": "The SquareTrade Help Center (get-help page) provides comprehensive resources for customers. You can file a claim online for the fastest service - have your receipt and covered item ready. Many claims are approved instantly, while others receive guidance from specialists. Register your plan to save time on future claim processing, though registration is not required for your plan to be active. Log in to view your plan details including what's covered, plan term dates, and additional features. Watch our 'How to File a Claim' video and transcript for step-by-step guidance. The Help Center also offers FAQs addressing common questions about receipts, registration, plan cancellation, and warranty interaction.",
+      "keywords": ["help", "support", "center", "guidance", "resources", "FAQ", "file claim"]
+    },
+    {
+      "id": "doc_012",
+      "title": "Phone Protection Plans and Options",
+      "category": "protection_plans",
+      "content": "SquareTrade offers comprehensive phone protection plans available as single line or family plans with up to four lines. Phone plans provide coverage for accidental damage, liquid damage, mechanical failures, and hardware issues. Plans can be customized based on your device type and protection needs. Family plans allow protection for multiple devices under one account. Phone plans include device replacement option if repair costs exceed device value. Plans are available for all major brands including iPhone, Samsung, Google Pixel, and others. Choose monthly or annual billing with discounted rates for annual commitments. Protection starts immediately after purchase and can be managed through the mobile app.",
+      "keywords": ["phone", "protection", "plans", "family", "coverage", "smartphone", "lines"]
+    },
+    {
+      "id": "doc_013",
+      "title": "Comprehensive Protection for Appliances and Furniture",
+      "category": "protection_plans",
+      "content": "SquareTrade's 'All Plans' offerings extend beyond phones to include major appliances and furniture protection. Coverage includes refrigerators, washers, dryers, dishwashers, and other major appliances. Furniture protection covers sofas, dining sets, and other household furniture against accidental damage and spills. Electronics coverage includes TVs, computers, laptops, tablets, and gaming consoles. Each category has specialized plans tailored to the specific risks and replacement costs. Plans start at affordable monthly rates based on device or appliance value. Coverage begins immediately after purchase with no waiting periods. All plans include 24/7 customer support, fast claim processing, and nationwide repair network access.",
+      "keywords": ["appliance", "furniture", "protection", "coverage", "plans", "all", "electronics"]
+    },
+    {
+      "id": "doc_014",
+      "title": "Support Portal and Knowledge Resources",
+      "category": "support",
+      "content": "The SquareTrade Support Portal (help.squaretrade.com) offers comprehensive self-service resources organized by category. Claims section provides articles on what you need to file a claim, shipping label assistance, and claims process guidance. Getting a Plan section covers how to learn more about smartphone protection and other plan types. Existing Plans section addresses common questions about plan registration, replacements for claimed items, and plan management. Spanish language support is available with articles in Spanish covering claims, registration, receipts, and coverage details. The support portal includes searchable FAQ database and categorized help articles. Most articles include step-by-step instructions and contact options for additional assistance.",
+      "keywords": ["support", "portal", "knowledge", "resources", "FAQ", "Spanish", "help"]
+    },
+    {
+      "id": "doc_015",
+      "title": "SquareTrade Blog - Product Tips and Company Updates",
+      "category": "company_info",
+      "content": "The SquareTrade Blog provides comprehensive how-to guides and maintenance tips for device protection. To extend smartphone battery life, disable background app refresh, reduce screen brightness, enable battery saver mode, and optimize charging habits by avoiding overcharging and using original chargers. To clean electronics safely, use microfiber cloths and approved cleaning solutions, never spray liquid directly on devices, use compressed air for ports and keyboards, and avoid harsh chemicals that damage protective coatings. For laptop data transfer, backup important files to cloud storage first using services like Google Drive or OneDrive, use file transfer tools such as Windows Transfer or Mac Migration Assistant, ensure both devices are fully charged before transferring, and consider external SSDs for large file transfers. Appliance maintenance tips include running monthly cleaning cycles on washing machines, checking detergent amounts appropriate for the machine type, inspecting hoses for cracks, cleaning refrigerator coils annually, checking door seals for proper contact, and organizing the fridge properly for air circulation. Device durability research shows that phones with Gorilla Glass survive drops better than plastic screens, water-resistant phones have varying levels of actual protection, and most device failures occur from corner drops or pressure on screens. Furniture protection requires using protective covers on upholstered items, cleaning spills immediately, maintaining proper humidity levels, and using appropriate storage methods. Electronics storage should be in cool, dry places away from direct sunlight, with protective cases, and batteries removed from devices not used for extended periods. The blog features Breakability Research with detailed drop test results and component failure analysis.",
+      "keywords": ["blog", "tips", "how-to", "guide", "company", "news", "testing", "maintenance", "battery", "cleaning", "data transfer", "care", "appliance", "laptop"]
+    },
+    {
+      "id": "doc_016",
+      "title": "Plan Registration and Account Management",
+      "category": "protection_plans",
+      "content": "Registering your SquareTrade plan is optional but recommended for streamlined claims processing. Registration is not required for your plan to be active - coverage is active immediately upon purchase. However, registering your receipt now saves time when filing a claim in the future. You can register your plan through your SquareTrade account on the website. When registering, provide your receipt and device information. Once registered, your plan details are securely stored in your account. You can view your plan term showing when coverage starts and how long it lasts. Account management tools allow you to view all covered devices, manage billing, and access additional plan features or benefits. Update your contact information and preferences through account settings.",
+      "keywords": ["registration", "account", "plan", "management", "receipt", "device", "portal"]
+    },
+    {
+      "id": "doc_017",
+      "title": "Plan Cancellation and Policy Management",
+      "category": "protection_plans",
+      "content": "You can cancel your SquareTrade plan at any time through your account or by contacting customer support. No cancellation fees apply if you cancel within a specified window. Contact SquareTrade support at 1-888-SQUARE-TRADE or through the website chat to request cancellation. Provide your policy number when canceling. Cancellation takes effect at the end of your current billing period. You will receive a confirmation email with cancellation details. If your plan has annual billing, check if pro-rata refunds apply. Your coverage remains active through the end of the current billing period. Claims filed before cancellation effective date will still be honored. For policy management questions, refer to your plan documents or contact support.",
+      "keywords": ["cancellation", "policy", "refund", "management", "billing", "terminate", "end"]
+    },
+    {
+      "id": "doc_018",
+      "title": "Plan Features and Additional Benefits",
+      "category": "protection_plans",
+      "content": "SquareTrade plans include multiple features and benefits beyond basic damage coverage. 24/7 customer support is included with all plans for claims help and coverage questions. Fast claim processing means most claims reviewed within 24 hours. Device replacement option allows replacement instead of repair if damage is extensive. Nationwide repair network provides convenient service centers for in-person repairs. Mobile app access enables on-the-go claim filing and status tracking. Real-time claim status notifications keep you updated at each step. Some plans include technical support for hardware troubleshooting. Data recovery assistance may be included for devices with data loss. All plans feature affordable monthly pricing with no annual commitment required. Plans are transferable if you sell your device. Optional add-ons like theft protection are available for certain device types.",
+      "keywords": ["features", "benefits", "support", "replacement", "tracking", "assistance", "additional"]
     }
   ]
 }

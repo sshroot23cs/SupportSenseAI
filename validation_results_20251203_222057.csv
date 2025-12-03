@@ -1,0 +1,17 @@
+intent,keywords_count,documents_count,status,issue,test_keyword,detected_intent,match,documents_retrieved
+intent_plan_inquiry,11,9,PASS,OK,plan,intent_plan_inquiry,Yes,"doc_001, doc_012, doc_013"
+intent_plan_details,9,6,PASS,OK,included,intent_plan_details,Yes,"doc_007, doc_018"
+intent_help_resources,9,3,WARN,Keyword matched 'intent_welcome' not 'intent_help_resources',help,intent_welcome,No,"doc_005, doc_011, doc_014"
+intent_blog_content,8,1,PASS,OK,blog,intent_blog_content,Yes,doc_015
+intent_pricing,9,3,PASS,OK,cost,intent_pricing,Yes,"doc_006, doc_002, doc_012"
+intent_file_claim,8,4,PASS,OK,file,intent_file_claim,Yes,"doc_003, doc_011, doc_010"
+intent_claim_status,8,3,PASS,OK,status,intent_claim_status,Yes,"doc_008, doc_018"
+intent_device_replacement,8,3,PASS,OK,replacement,intent_device_replacement,Yes,"doc_002, doc_003, doc_008"
+intent_contact_support,10,3,PASS,OK,contact,intent_contact_support,Yes,"doc_005, doc_014, doc_015"
+intent_activation,9,3,FAIL,No documents retrieved for keyword,sign up,intent_activation,Yes,
+intent_registration,6,2,PASS,OK,register,intent_registration,Yes,"doc_011, doc_016"
+intent_plan_cancellation,6,1,PASS,OK,cancel,intent_plan_cancellation,Yes,"doc_017, doc_011"
+intent_faq,6,4,PASS,OK,faq,intent_faq,Yes,"doc_011, doc_014"
+intent_welcome,8,4,FAIL,No documents retrieved for keyword,hi,intent_welcome,Yes,
+intent_escalation_urgent,5,0,SKIP,No docs expected,,,,
+intent_escalation_issue,5,0,SKIP,No docs expected,,,,

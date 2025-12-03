@@ -1,0 +1,9 @@
+metric,value
+Total Intents Tested,16
+Total Documents,18
+Successful Tests,11
+Issues Found,3
+Pass Rate,68.8%
+LLM Tests Performed,14
+Correct Intent Matches,10
+Intent Match Rate,71.4%
