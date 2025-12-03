@@ -247,18 +247,20 @@ class RAGEngine:
         Returns:
             Formatted prompt
         """
-        prompt = f"""You are a helpful SquareTrade customer support assistant. Answer the user's question based ONLY on the provided knowledge base content below. 
+        prompt = f"""You are a helpful SquareTrade customer support assistant. Your task is to answer the user's question using ONLY the information from the provided sources below.
 
-If the answer is not in the knowledge base, politely explain that you don't have that information.
+IMPORTANT RULES:
+1. Use ONLY information from the sources provided. Do NOT make up information.
+2. If the user's question is answered in the sources, provide a clear and helpful answer.
+3. If the answer is NOT in the sources, say "I don't have that information in our knowledge base."
+4. Read all sources carefully before answering - the answer may be in any of the sources.
 
-Do not provide information outside of SquareTrade plans, claims, and support topics.
-
-Knowledge Base Content:
+SOURCES:
 {context}
 
-User Question: {user_query}
+USER QUESTION: {user_query}
 
-Answer:"""
+ANSWER (use the information from sources above):"""
         
         return prompt
     
