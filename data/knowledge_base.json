@@ -1,0 +1,130 @@
+{
+  "documents": [
+    {
+      "id": "doc_001",
+      "title": "SquareTrade Protection Plans Overview",
+      "category": "protection_plans",
+      "content": "SquareTrade offers comprehensive protection plans for electronics and appliances. Our plans cover accidental damage, mechanical breakdowns, and hardware failures. We provide coverage for smartphones, laptops, tablets, TVs, and major appliances. Plans start at affordable prices with no deductibles on most coverage. Coverage includes manufacturer defects and accidental damage from drops, spills, and power surges. SquareTrade plans are transferable to new owners if you sell your device.",
+      "keywords": ["protection", "plans", "coverage", "devices", "electronics", "accidental damage"]
+    },
+    {
+      "id": "doc_002",
+      "title": "Smartphone and Tablet Protection Plans",
+      "category": "protection_plans",
+      "content": "SquareTrade smartphone protection plans cover physical damage, liquid damage, and mechanical failures. Our tablet plans protect against accidental drops and screen cracks. Plans include device replacement if repair costs exceed the device value. Coverage is available for iPhones, Samsung, Google Pixel, and other major brands. We offer 24/7 customer support for claims processing. Replacement devices are typically shipped within 2-3 business days.",
+      "keywords": ["smartphone", "tablet", "protection", "damage", "replacement", "screen", "liquid"]
+    },
+    {
+      "id": "doc_003",
+      "title": "How to File a Claim",
+      "category": "claims",
+      "content": "To file a SquareTrade claim, log into your account on our website or mobile app. Click on 'File a Claim' and select the affected device. Describe what happened to your device in detail. You may need to provide proof of purchase and photos of the damage. Submit your claim through the online portal. Most claims are reviewed within 24 hours. You will receive an email confirmation with your claim number and next steps. If approved, you can choose repair or replacement options.",
+      "keywords": ["claim", "file", "damage", "repair", "replacement", "process", "approval"]
+    },
+    {
+      "id": "doc_004",
+      "title": "Coverage Details and Exclusions",
+      "category": "protection_plans",
+      "content": "SquareTrade coverage includes accidental damage, manufacturer defects, mechanical failures, and hardware malfunctions. Coverage does NOT include normal wear and tear, cosmetic damage only, water damage beyond our liquid coverage limits, theft, or loss. Exclusions also apply to damage from unauthorized repairs or modifications. Coverage begins immediately after purchase. Deductibles vary by plan and device value. Some plans offer $0 deductibles. Maximum claim limits apply based on device value.",
+      "keywords": ["coverage", "exclusions", "deductible", "limits", "warranty", "damage"]
+    },
+    {
+      "id": "doc_005",
+      "title": "Customer Support and Contact Information",
+      "category": "support",
+      "content": "SquareTrade customer support is available 24/7 to answer questions about your plan or help with claims. You can contact us via phone at 1-888-SQUARE-TRADE or through the online chat on our website. Email support is also available for non-urgent inquiries. Our support team can help with plan activation, coverage questions, claim filing, and device replacement coordination. Average wait time for phone support is under 5 minutes. We also provide self-service tools in the mobile app for claim tracking.",
+      "keywords": ["support", "contact", "help", "phone", "chat", "customer service", "assistance"]
+    },
+    {
+      "id": "doc_006",
+      "title": "Plan Pricing and Subscription Options",
+      "category": "protection_plans",
+      "content": "SquareTrade offers flexible pricing based on device type and value. Smartphone plans range from $4-$15 per month depending on device. Tablet plans start at $3 per month for basic coverage and $8 for premium. Laptop protection plans range from $7-$18 per month. Major appliance plans start at $12 per month. We offer monthly, annual, and multi-year payment options. Annual plans provide 10% savings compared to monthly billing. All plans include 24/7 support and fast claim processing.",
+      "keywords": ["pricing", "cost", "monthly", "annual", "payment", "affordable", "value"]
+    },
+    {
+      "id": "doc_007",
+      "title": "Laptop and Computer Protection Plans",
+      "category": "protection_plans",
+      "content": "SquareTrade laptop protection covers accidental damage, mechanical failures, power surges, and component breakdowns. Plans include coverage for screens, keyboards, hard drives, and batteries. We repair or replace damaged laptops at service centers nationwide. Coverage applies to Windows PCs and MacBooks. Protection against theft is available as an optional add-on. Backup data recovery assistance is included for data loss scenarios. Technical support is available for hardware troubleshooting.",
+      "keywords": ["laptop", "computer", "protection", "repair", "damage", "breakdown", "hardware"]
+    },
+    {
+      "id": "doc_008",
+      "title": "Claim Status and Tracking",
+      "category": "claims",
+      "content": "After filing a claim, you can track its status in real-time through your SquareTrade account. Log into the website or mobile app and go to 'My Claims' section. You will see the current status such as Submitted, Under Review, Approved, or Completed. Email notifications are sent at each status change. If your claim is approved, you can choose to repair the device or receive a replacement. For repairs, estimated turnaround time is 5-10 business days. Replacement devices are shipped with tracking information.",
+      "keywords": ["claim", "status", "tracking", "notification", "approved", "repair", "replacement"]
+    },
+    {
+      "id": "doc_009",
+      "title": "Device Replacement Process",
+      "category": "claims",
+      "content": "If your device is beyond repair, SquareTrade offers device replacement. Once your replacement claim is approved, we ship a refurbished device of the same model or equivalent. Shipping is typically completed within 2-3 business days via expedited carrier. You will receive the replacement with all necessary cables and accessories. The device comes with a 30-day warranty from SquareTrade. You have 7 days to inspect the replacement and return it if unsatisfied.",
+      "keywords": ["replacement", "device", "refurbished", "shipping", "warranty", "exchange"]
+    },
+    {
+      "id": "doc_010",
+      "title": "Plan Activation and Getting Started",
+      "category": "protection_plans",
+      "content": "To activate a SquareTrade plan, purchase coverage on our website or through authorized retailers. Enter your device serial number or IMEI to verify eligibility. Review plan details and pricing options. Complete payment through credit card, debit card, or PayPal. You will receive a confirmation email with your policy number and plan details. Coverage typically begins within 24 hours of purchase. Download the SquareTrade mobile app to manage your plan and file claims on the go.",
+      "keywords": ["activation", "purchase", "enrollment", "setup", "getting started", "registration"]
+    },
+    {
+      "id": "doc_011",
+      "title": "Help Center and Getting Support",
+      "category": "support",
+      "content": "The SquareTrade Help Center (get-help page) provides comprehensive resources for customers. You can file a claim online for the fastest service - have your receipt and covered item ready. Many claims are approved instantly, while others receive guidance from specialists. Register your plan to save time on future claim processing, though registration is not required for your plan to be active. Log in to view your plan details including what's covered, plan term dates, and additional features. Watch our 'How to File a Claim' video and transcript for step-by-step guidance. The Help Center also offers FAQs addressing common questions about receipts, registration, plan cancellation, and warranty interaction.",
+      "keywords": ["help", "support", "center", "guidance", "resources", "FAQ", "file claim"]
+    },
+    {
+      "id": "doc_012",
+      "title": "Phone Protection Plans and Options",
+      "category": "protection_plans",
+      "content": "SquareTrade offers comprehensive phone protection plans available as single line or family plans with up to four lines. Phone plans provide coverage for accidental damage, liquid damage, mechanical failures, and hardware issues. Plans can be customized based on your device type and protection needs. Family plans allow protection for multiple devices under one account. Phone plans include device replacement option if repair costs exceed device value. Plans are available for all major brands including iPhone, Samsung, Google Pixel, and others. Choose monthly or annual billing with discounted rates for annual commitments. Protection starts immediately after purchase and can be managed through the mobile app.",
+      "keywords": ["phone", "protection", "plans", "family", "coverage", "smartphone", "lines"]
+    },
+    {
+      "id": "doc_013",
+      "title": "Comprehensive Protection for Appliances and Furniture",
+      "category": "protection_plans",
+      "content": "SquareTrade's 'All Plans' offerings extend beyond phones to include major appliances and furniture protection. Coverage includes refrigerators, washers, dryers, dishwashers, and other major appliances. Furniture protection covers sofas, dining sets, and other household furniture against accidental damage and spills. Electronics coverage includes TVs, computers, laptops, tablets, and gaming consoles. Each category has specialized plans tailored to the specific risks and replacement costs. Plans start at affordable monthly rates based on device or appliance value. Coverage begins immediately after purchase with no waiting periods. All plans include 24/7 customer support, fast claim processing, and nationwide repair network access.",
+      "keywords": ["appliance", "furniture", "protection", "coverage", "plans", "all", "electronics"]
+    },
+    {
+      "id": "doc_014",
+      "title": "Support Portal and Knowledge Resources",
+      "category": "support",
+      "content": "The SquareTrade Support Portal (help.squaretrade.com) offers comprehensive self-service resources organized by category. Claims section provides articles on what you need to file a claim, shipping label assistance, and claims process guidance. Getting a Plan section covers how to learn more about smartphone protection and other plan types. Existing Plans section addresses common questions about plan registration, replacements for claimed items, and plan management. Spanish language support is available with articles in Spanish covering claims, registration, receipts, and coverage details. The support portal includes searchable FAQ database and categorized help articles. Most articles include step-by-step instructions and contact options for additional assistance.",
+      "keywords": ["support", "portal", "knowledge", "resources", "FAQ", "Spanish", "help"]
+    },
+    {
+      "id": "doc_015",
+      "title": "SquareTrade Blog - Product Tips and Company Updates",
+      "category": "company_info",
+      "content": "The SquareTrade Blog provides comprehensive how-to guides and maintenance tips for device protection. To extend smartphone battery life, disable background app refresh, reduce screen brightness, enable battery saver mode, and optimize charging habits by avoiding overcharging and using original chargers. To clean electronics safely, use microfiber cloths and approved cleaning solutions, never spray liquid directly on devices, use compressed air for ports and keyboards, and avoid harsh chemicals that damage protective coatings. For laptop data transfer, backup important files to cloud storage first using services like Google Drive or OneDrive, use file transfer tools such as Windows Transfer or Mac Migration Assistant, ensure both devices are fully charged before transferring, and consider external SSDs for large file transfers. Appliance maintenance tips include running monthly cleaning cycles on washing machines, checking detergent amounts appropriate for the machine type, inspecting hoses for cracks, cleaning refrigerator coils annually, checking door seals for proper contact, and organizing the fridge properly for air circulation. Device durability research shows that phones with Gorilla Glass survive drops better than plastic screens, water-resistant phones have varying levels of actual protection, and most device failures occur from corner drops or pressure on screens. Furniture protection requires using protective covers on upholstered items, cleaning spills immediately, maintaining proper humidity levels, and using appropriate storage methods. Electronics storage should be in cool, dry places away from direct sunlight, with protective cases, and batteries removed from devices not used for extended periods. The blog features Breakability Research with detailed drop test results and component failure analysis.",
+      "keywords": ["blog", "tips", "how-to", "guide", "company", "news", "testing", "maintenance", "battery", "cleaning", "data transfer", "care", "appliance", "laptop"]
+    },
+    {
+      "id": "doc_016",
+      "title": "Plan Registration and Account Management",
+      "category": "protection_plans",
+      "content": "Registering your SquareTrade plan is optional but recommended for streamlined claims processing. Registration is not required for your plan to be active - coverage is active immediately upon purchase. However, registering your receipt now saves time when filing a claim in the future. You can register your plan through your SquareTrade account on the website. When registering, provide your receipt and device information. Once registered, your plan details are securely stored in your account. You can view your plan term showing when coverage starts and how long it lasts. Account management tools allow you to view all covered devices, manage billing, and access additional plan features or benefits. Update your contact information and preferences through account settings.",
+      "keywords": ["registration", "account", "plan", "management", "receipt", "device", "portal"]
+    },
+    {
+      "id": "doc_017",
+      "title": "Plan Cancellation and Policy Management",
+      "category": "protection_plans",
+      "content": "You can cancel your SquareTrade plan at any time through your account or by contacting customer support. No cancellation fees apply if you cancel within a specified window. Contact SquareTrade support at 1-888-SQUARE-TRADE or through the website chat to request cancellation. Provide your policy number when canceling. Cancellation takes effect at the end of your current billing period. You will receive a confirmation email with cancellation details. If your plan has annual billing, check if pro-rata refunds apply. Your coverage remains active through the end of the current billing period. Claims filed before cancellation effective date will still be honored. For policy management questions, refer to your plan documents or contact support.",
+      "keywords": ["cancellation", "policy", "refund", "management", "billing", "terminate", "end"]
+    },
+    {
+      "id": "doc_018",
+      "title": "Plan Features and Additional Benefits",
+      "category": "protection_plans",
+      "content": "SquareTrade plans include multiple features and benefits beyond basic damage coverage. 24/7 customer support is included with all plans for claims help and coverage questions. Fast claim processing means most claims reviewed within 24 hours. Device replacement option allows replacement instead of repair if damage is extensive. Nationwide repair network provides convenient service centers for in-person repairs. Mobile app access enables on-the-go claim filing and status tracking. Real-time claim status notifications keep you updated at each step. Some plans include technical support for hardware troubleshooting. Data recovery assistance may be included for devices with data loss. All plans feature affordable monthly pricing with no annual commitment required. Plans are transferable if you sell your device. Optional add-ons like theft protection are available for certain device types.",
+      "keywords": ["features", "benefits", "support", "replacement", "tracking", "assistance", "additional"]
+    }
+  ]
+}

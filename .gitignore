@@ -44,7 +44,6 @@ logs/
 *.log
 
 # Database/Data
-data/knowledge_base.json
 data/escalations.json
 *.db
 *.sqlite
