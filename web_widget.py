@@ -182,6 +182,13 @@ def widget():
             .message.user .text { background: #667eea; color: white; padding: 10px 15px; border-radius: 15px; display: inline-block; max-width: 80%; word-wrap: break-word; }
             .message.agent .text { background: #e3e6ef; color: #333; padding: 10px 15px; border-radius: 15px; display: inline-block; max-width: 80%; word-wrap: break-word; }
             
+            .message.agent .text a { color: #667eea; text-decoration: underline; cursor: pointer; font-weight: 500; }
+            .message.agent .text a:hover { color: #764ba2; text-decoration: underline; }
+            .message.agent .text b, .message.agent .text strong { font-weight: 700; }
+            .message.agent .text i, .message.agent .text em { font-style: italic; }
+            .message.agent .text p { margin: 5px 0; }
+            .message.agent .text ul, .message.agent .text li { margin-left: 15px; }
+            
             .chat-input-area { padding: 15px; border-top: 1px solid #eee; display: flex; gap: 10px; }
             .chat-input-area input { flex: 1; padding: 10px 15px; border: 1px solid #ddd; border-radius: 20px; font-size: 14px; }
             .chat-input-area button { padding: 10px 20px; background: #667eea; color: white; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; }
@@ -276,8 +283,45 @@ def widget():
             function displayMessage(text, sender) {
                 const div = document.createElement('div');
                 div.className = 'message ' + sender;
-                div.innerHTML = '<div class="text">' + escapeHtml(text) + '</div>';
+                // Allow HTML for rich formatting (links, emphasis, etc.)
+                // but sanitize to prevent XSS by removing script tags and event handlers
+                const sanitized = sanitizeHtml(text);
+                div.innerHTML = '<div class="text">' + sanitized + '</div>';
                 document.getElementById('messages').appendChild(div);
+            }
+            
+            function sanitizeHtml(html) {
+                // Create a temporary container to parse HTML safely
+                const temp = document.createElement('div');
+                temp.textContent = html;
+                const text = temp.innerHTML;
+                
+                // Allow only safe tags: <a>, <b>, <strong>, <i>, <em>, <br>, <p>, <ul>, <li>
+                const allowedTags = ['a', 'b', 'strong', 'i', 'em', 'br', 'p', 'ul', 'li'];
+                const doc = new DOMParser().parseFromString('<div>' + text + '</div>', 'text/html');
+                
+                // Remove all attributes except href from <a> tags
+                const links = doc.querySelectorAll('a');
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+                    link.removeAttribute('href');
+                    link.removeAttribute('onclick');
+                    link.removeAttribute('onerror');
+                    link.removeAttribute('onload');
+                    link.removeAttribute('onmouseover');
+                    // Re-add href only if it's a safe URL (http, https, or relative)
+                    if (href && (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('/'))) {
+                        link.setAttribute('href', href);
+                        link.setAttribute('target', '_blank');
+                        link.setAttribute('rel', 'noopener noreferrer');
+                    }
+                });
+                
+                // Remove script tags and other dangerous elements
+                const scripts = doc.querySelectorAll('script, style, iframe, object, embed, form, input, button');
+                scripts.forEach(el => el.remove());
+                
+                return doc.body.innerHTML;
             }
             
             function scrollToBottom() {
