@@ -7,10 +7,12 @@ from flask import Flask, request, jsonify, render_template_string
 from flask_cors import CORS
 import logging
 import uuid
+import os
 from datetime import datetime
 from chat_agent import get_agent
 
-app = Flask(__name__)
+# Configure Flask to serve static files
+app = Flask(__name__, static_folder='static', static_url_path='/static')
 CORS(app)
 
 logger = logging.getLogger(__name__)
