@@ -131,26 +131,14 @@ class SquareTradeAgent:
                     "metadata": metadata
                 }
             
-            # Step 4: Return confident answer with sources
-            # Format sources as HTML links
-            sources_html = ""
-            retrieved_docs = metadata.get('retrieved_docs', [])
-            if retrieved_docs:
-                sources_html = "<br><br><strong>Sources:</strong><br>"
-                for i, doc in enumerate(retrieved_docs, 1):
-                    doc_title = doc.get('title', 'Unknown Source')
-                    doc_id = doc.get('id', f'doc_{i}')
-                    sources_html += f"<a href='#{doc_id}'>{i}. {doc_title}</a><br>"
-            
-            response_with_sources = answer + sources_html if sources_html else answer
-            
+            # Step 4: Return confident answer
             return {
-                "response": response_with_sources,
+                "response": answer,
                 "success": True,
                 "escalated": False,
                 "confidence": metadata.get('confidence'),
                 "category": metadata.get('category'),
-                "sources": len(retrieved_docs),
+                "sources": len(metadata.get('retrieved_docs', [])),
                 "metadata": metadata
             }
         
