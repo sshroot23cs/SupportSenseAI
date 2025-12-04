@@ -208,6 +208,7 @@ def widget():
                 
                 // Display user message
                 displayMessage(message, 'user');
+                scrollToBottom();
                 input.value = '';
                 
                 // Show loading indicator
@@ -215,6 +216,7 @@ def widget():
                 loadingDiv.className = 'loading';
                 loadingDiv.textContent = 'Thinking...';
                 document.getElementById('messages').appendChild(loadingDiv);
+                scrollToBottom();
                 
                 try {
                     const response = await fetch(API_URL, {
@@ -244,9 +246,11 @@ def widget():
                         notice.className = 'escalation-notice';
                         notice.textContent = '⚠️ Escalated to human support. Ticket: ' + data.escalation_id;
                         document.getElementById('messages').appendChild(notice);
+                        scrollToBottom();
                     }
                     
                     displayMessage(data.response, 'agent');
+                    scrollToBottom();
                     
                     // Show confidence if available
                     if (data.confidence !== undefined) {
@@ -254,14 +258,13 @@ def widget():
                         confidence.className = 'loading';
                         confidence.textContent = `Confidence: ${(data.confidence * 100).toFixed(1)}%`;
                         document.getElementById('messages').appendChild(confidence);
+                        scrollToBottom();
                     }
                 } catch (error) {
                     loadingDiv.remove();
                     displayMessage('Error: ' + error.message, 'agent');
+                    scrollToBottom();
                 }
-                
-                // Scroll to bottom
-                document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight;
             }
             
             function displayMessage(text, sender) {
@@ -269,6 +272,11 @@ def widget():
                 div.className = 'message ' + sender;
                 div.innerHTML = '<div class="text">' + escapeHtml(text) + '</div>';
                 document.getElementById('messages').appendChild(div);
+            }
+            
+            function scrollToBottom() {
+                const messagesDiv = document.getElementById('messages');
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
             }
             
             function escapeHtml(text) {
@@ -284,6 +292,7 @@ def widget():
             // Welcome message
             window.addEventListener('load', () => {
                 displayMessage('Hello! I\\'m the SquareTrade Support Assistant. How can I help you today?', 'agent');
+                scrollToBottom();
             });
         </script>
     </body>
