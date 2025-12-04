@@ -163,7 +163,11 @@ def widget():
         <title>SquareTrade Chat Widget</title>
         <style>
             * { margin: 0; padding: 0; box-sizing: border-box; }
-            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
+            body { 
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.allstateagentfinder.com/protection-plans-hero.jpg') center/cover no-repeat fixed;
+                min-height: 100vh;
+            }
             
             .chat-widget { position: fixed; bottom: 20px; right: 20px; width: 400px; height: 600px; border-radius: 10px; box-shadow: 0 5px 40px rgba(0,0,0,0.16); display: flex; flex-direction: column; background: white; z-index: 9999; }
             
