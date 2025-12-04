@@ -167,7 +167,7 @@ def widget():
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body { 
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-                background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/static/allstate-bg.jpg') center/cover no-repeat fixed;
+                background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/static/allstate-bg.png') center/cover no-repeat fixed;
                 min-height: 100vh;
             }
             
